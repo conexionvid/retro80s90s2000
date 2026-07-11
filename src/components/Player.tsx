@@ -31,7 +31,7 @@ export function Player({ playing, muted, volume, song, artist, listeners, cover,
         <div className="flex flex-col items-center mb-8 w-48 md:w-64 xl:w-full mx-auto">
           {!imgError ? (
             <img 
-              src="/assets/logo.png" 
+              src={`${import.meta.env.BASE_URL}assets/logo.png`} 
               alt="Conexion Vid Radio" 
               className="w-full h-auto drop-shadow-[0_0_25px_rgba(168,85,247,0.6)]"
               onError={() => setImgError(true)}
