@@ -38,7 +38,8 @@ export default function App() {
              handleVolumeChange={handleVolumeChange}
              audioRef={audioRef}
          />
-         <audio ref={audioRef} src="https://laradiossl.online:12000/live" crossOrigin="anonymous" />
+         {/* Se agregó la propiedad autoPlay al reproductor de audio */}
+         <audio ref={audioRef} autoPlay src="https://laradiossl.online:12000/live" crossOrigin="anonymous" />
       </main>
 
       {/* Fixed Mini Player for consistency during scrolling - with Nebulous visualizer */}
