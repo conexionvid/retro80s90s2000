@@ -21,6 +21,21 @@ export function useRadio() {
   const currentTrackRef = useRef<TrackHistory | null>(null);
 
   useEffect(() => {
+    // Attempt to autoplay on mount
+    const tryAutoplay = async () => {
+      if (audioRef.current) {
+        try {
+          await audioRef.current.play();
+          setPlaying(true);
+        } catch (err) {
+          console.log('Autoplay prevented by browser (user interaction required):', err);
+        }
+      }
+    };
+    
+    // Give ref time to attach
+    setTimeout(tryAutoplay, 100);
+
     (window as any).handleMetadata = async (data: any) => {
       try {
         const songTitle = data.songtitle || 'RADIO ONLINE';
