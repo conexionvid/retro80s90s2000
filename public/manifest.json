@@ -1,0 +1,16 @@
+{
+  "name": "Conexion Vid Radio",
+  "short_name": "VidRadio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#1d4ed8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
